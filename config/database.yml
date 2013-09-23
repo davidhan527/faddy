@@ -27,21 +27,25 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: myapp_development
+  database: faddy_development
   pool: 5
   username: davidhan
   password:
+  host: localhost
 test:
   adapter: postgresql
   encoding: unicode
-  database: myapp_test
+  database: faddy_test
   pool: 5
   username: davidhan
   password:
+  host: localhost
 production:
   adapter: postgresql
   encoding: unicode
-  database: myapp_production
+  database: faddy_production
   pool: 5
   username: davidhan
   password:
+  host: localhost
+
