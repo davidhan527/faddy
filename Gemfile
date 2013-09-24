@@ -15,6 +15,7 @@ end
 
 gem 'tux'
 
+gem 'instagram'
 
 
 
