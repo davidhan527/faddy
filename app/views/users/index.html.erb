@@ -1,0 +1,24 @@
+<div class="row-fluid">
+ <div class="span12">
+  <h1><%= @user.username %>'s feed</h1>    
+ </div>
+</div><!--/row-->
+
+
+<div class="row-fluid">
+  <div class="span12">
+    <ul class="polaroids">
+      <% @recent_media_items.each do |media| %>
+        <li class="polaroid">
+          <a href="<%= media.link %>" 
+             title="<%= media.caption.nil? ? 'untitled' : media.caption.text %>">
+            <img src="<%= media.images.standard_resolution.url %>" 
+                 alt="<%= media.caption.nil? ? 'untitled' : media.caption.text %>" />
+          </a>
+        </li>
+      <% end %>
+    </ul>    
+ </div>
+</div><!--/row-->
+
+
