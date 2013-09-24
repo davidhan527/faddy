@@ -1,0 +1,2 @@
+module FaddysHelper
+end

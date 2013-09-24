@@ -5,4 +5,4 @@ Instagram.configure do |config|
   config.client_secret = "1d9bcb7f338c490f8136cdfa133b5bbd"
 end
 
-CALLBACK_URL = "http://hidden-hamlet-7511.herokuapp.com/"
+CALLBACK_URL = "http://hidden-hamlet-7511.herokuapp.com/oauth/callback"

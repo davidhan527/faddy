@@ -1,8 +1,6 @@
 Faddy::Application.routes.draw do
 
-  match 'user/:username', :to => 'users#index'
-  match 'session/:action', :to => 'sessions'
-  root :to => "sessions#connect"
+  root :to => "faddys#index"
 
 # root :to => 'faddys#index'
 
