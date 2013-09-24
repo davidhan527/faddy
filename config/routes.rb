@@ -1,7 +1,10 @@
 Faddy::Application.routes.draw do
 
-  root :to => "faddys#index"
+  root :to => "sessions#index"
 
+  get 'oauth/callback', :to => 'sessions#new'
+
+  get '/index', :to => 'faddys#index'
 # root :to => 'faddys#index'
 
 # get '/faddys', :to => 'faddys#connect'
