@@ -6,7 +6,7 @@ class FaddyController < ApplicationController
     #   # config.access_token = ''
     # end
     
-  https://api.instagram.com/v1/media/popular?client_id='7ffb6e89a4e74a23b0dc42b0ad6a6588'
+  # https://api.instagram.com/v1/media/popular?client_id='7ffb6e89a4e74a23b0dc42b0ad6a6588'
   end
 
 
