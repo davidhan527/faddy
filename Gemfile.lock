@@ -49,6 +49,9 @@ GEM
     geocoder (1.1.8)
     hashie (2.0.5)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     instagram (0.10.0)
       faraday (>= 0.7, < 0.9)
@@ -63,10 +66,15 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     method_source (0.8.2)
     mime-types (1.25)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
     multi_json (1.8.0)
+    multi_xml (0.5.5)
     multipart-post (1.2.0)
+    nifty-generators (0.4.6)
     pg (0.16.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -155,8 +163,11 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   geocoder
+  httparty
   instagram
   jquery-rails
+  mocha
+  nifty-generators
   pg
   pry
   rails (= 3.2.13)

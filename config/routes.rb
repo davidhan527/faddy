@@ -1,5 +1,7 @@
 Faddy::Application.routes.draw do
 
+  resources :locations
+
   root :to => "sessions#index"
 
   get 'oauth/callback', :to => 'sessions#new'

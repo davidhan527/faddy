@@ -21,6 +21,9 @@ gem 'pry'
 
 gem 'geocoder'
 
+gem 'httparty'
+
+gem 'nifty-generators'
 
 
 # Gems used only for assets and not required
@@ -51,3 +54,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test
