@@ -1,3 +1,22 @@
 
+<form method="post" action="/feed">
+  <label>Location: </label>
+  <input type="text" name="location" autofocus>
 
-<h1><%= @user.username %></h1>
+  
+
+</form>
+  
+
+
+<% @food_sorted.each do |food| %>
+<div class="pic">
+  <img src="<%=food.images.low_resolution.url%>">
+  <p><%= food.tags %></p>
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+

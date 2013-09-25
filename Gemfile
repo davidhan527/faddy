@@ -17,6 +17,10 @@ gem 'tux'
 
 gem 'instagram'
 
+gem 'pry'
+
+gem 'geocoder'
+
 
 
 # Gems used only for assets and not required
