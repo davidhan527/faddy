@@ -8,7 +8,7 @@ Faddy::Application.routes.draw do
 
   get '/location', :to => 'faddys#new'
 
-  get '/feed', :to => 'faddys#feed'
+  get '/food', :to => 'faddys#food'
 
 # root :to => 'faddys#index'
 

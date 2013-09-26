@@ -1,0 +1,21 @@
+<div id="instagram" class="picture container">
+  <% @food_sorted.each do |food| %>
+  
+    <% if !(@food_tags & food.tags).empty? %>
+      <% if (@tag_filter & food.tags).empty? %>
+        <div class="eight columns offset-by-four">
+        <img src="<%=food.images.standard_resolution.url%>">
+        <h4><%= food.location.name %> </h4>
+        <% if food.caption.present? && food.caption.has_key?("text") %>
+          <p><%= food.caption["text"] %> </p>
+        <% end %>
+        <p>Likes: <%= food.likes["count"] %></p>
+        <p>Tags: <%= food.tags %></p>
+        </div>
+        <div class="row"></div>
+      <% end %> 
+    <% end %>
+    
+  <% end %>
+</div>
+

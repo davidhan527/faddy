@@ -11,7 +11,7 @@ class FaddysController < ApplicationController
 
 
     
-    def feed
+    def food
       client = Instagram.client(:access_token => session[:access_token])
 
     location = params[:location]
@@ -20,15 +20,14 @@ class FaddysController < ApplicationController
     x = coordinates[0]
     y = coordinates[1]
 
-    loc = Instagram.media_search("#{x}","#{y}", options = {:count => 60})
-    loc_top = Instagram.media_search("#{x + 0.006}","#{y}", options = {:count => 60})
-    loc_bottom = Instagram.media_search("#{x - 0.006}","#{y}", options = {:count => 60})
-    loc_right = Instagram.media_search("#{x}","#{y - 0.06}", options = {:count => 60})
-    loc_left = Instagram.media_search("#{x}","#{y + 0.06}", options = {:count => 60})
+    loc = Instagram.media_search("#{x}","#{y}", options = {:count => 80})
+    loc_top = Instagram.media_search("#{x + 0.007}","#{y}", options = {:count => 60})
+    loc_bottom = Instagram.media_search("#{x - 0.007}","#{y}", options = {:count => 60})
+    loc_right = Instagram.media_search("#{x}","#{y - 0.07}", options = {:count => 60})
+    loc_left = Instagram.media_search("#{x}","#{y + 0.07}", options = {:count => 60})
 
     results = loc + loc_top + loc_bottom + loc_left + loc_right
     
-    # binding.pry
     # page_1 = Instagram.media_search(x, y)
     # page_2_max_id = page_1.pagination.next_max_id
     # page_2 = Instagram.media_search(x, y, :max_id => page_2_max_id ) unless page_2_max_id.nil?
@@ -43,7 +42,11 @@ class FaddysController < ApplicationController
     # page_3 = Instagram.tag_recent_media('food', :max_id => page_3_max_id ) unless page_2_max_id.nil?
     # food = page_1 + page_2 + page_3
         @food_sorted = results.sort_by {|hash| hash.likes["count"]}.reverse! #first(15)
+        @food_tags = ["food", "foodporn", "yum", "yummy", "foodie"]
+        @tag_filter = ["dog", "sexy"]
+        # <% if food.tags.include?("food") || food.tags.include?("foodporn") || food.tags.include?("yum") || food.tags.include?("instafood") || food.tags.include?("yummy") || food.tags.include?("foodie") %>
 
+    # binding.pry
     
     end
 
