@@ -1,9 +1,9 @@
-<div class="picture_wrapper">
+<div class="picture">
   <% @food_sorted.each do |food| %>
   
     <% if food.tags.include?("food") || food.tags.include?("foodporn") || food.tags.include?("yum") || food.tags.include?("instafood") || food.tags.include?("yummy") || food.tags.include?("foodie") %>
-      <img src="<%=food.images.low_resolution.url%>">
-      <p>tags: <%= food.tags.join(" | ") %></p>
+      <img class="columns" src="<%=food.images.standard_resolution.url%>">
+      <p>Tags: <%= food.tags.join(" | ") %></p>
       <p>Likes: <%= food.likes["count"] %></p>
     <% end %>
   

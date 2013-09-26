@@ -28,7 +28,7 @@ class FaddysController < ApplicationController
 
     results = loc + loc_top + loc_bottom + loc_left + loc_right
     
-    binding.pry
+    # binding.pry
     # page_1 = Instagram.media_search(x, y)
     # page_2_max_id = page_1.pagination.next_max_id
     # page_2 = Instagram.media_search(x, y, :max_id => page_2_max_id ) unless page_2_max_id.nil?
