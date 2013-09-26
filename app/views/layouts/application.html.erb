@@ -26,11 +26,23 @@
   <div class="one column">|16 column|</div>
   <div class="row"></div>
   <div class="form_wrapper">
-    <form method="get" action="/food">
-      <label>Location: </label>
-      <input id="input" type="text" name="location" autofocus>
-      <input type="submit" value="Submit">
-      </form>
+  <%= link_to "Dessert", desserts_path %>
+
+  <form method="get" action="/food">
+  <label>Location: </label>
+  <input id="input" type="text" name="location" autofocus>
+  <input type="submit" value="FOOD">
+</form>
+<form method="get" action="/desserts">
+  <label>Location: </label>
+  <input id="input" type="text" name="location" autofocus>
+  <input type="submit" value="DESSERT">
+</form>
+<form method="get" action="/drinks">
+  <label>Location: </label>
+  <input id="input" type="text" name="location" autofocus>
+  <input type="submit" value="DRINKS">
+</form>
   </div>
 
 </div>

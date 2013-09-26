@@ -1,0 +1,24 @@
+
+<div id="instagram" class="picture container">
+
+
+  <% @drinks_sorted.each do |drink| %>
+  
+    <% if !(@drinks_tags & drink.tags).empty? %>
+      <% if (@tag_filter & drink.tags).empty? %>
+        <div class="eight columns offset-by-three">
+        <img src="<%=drink.images.standard_resolution.url%>">
+        <h4><%= drink.location.name %> </h4>
+        <% if drink.caption.present? && drink.caption.has_key?("text") %>
+          <p><%= drink.caption["text"] %> </p>
+        <% end %>
+        <p>Likes: <%= drink.likes["count"] %></p>
+        <p>Tags: <%= drink.tags %></p>
+        </div>
+        <div class="row"></div>
+      <% end %> 
+    <% end %>
+    
+  <% end %>
+</div>
+

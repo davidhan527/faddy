@@ -1,9 +1,11 @@
+
 <div id="instagram" class="picture container">
+<% if @food_sorted.present? %>
   <% @food_sorted.each do |food| %>
   
     <% if !(@food_tags & food.tags).empty? %>
       <% if (@tag_filter & food.tags).empty? %>
-        <div class="eight columns offset-by-four">
+        <div class="eight columns offset-by-three">
         <img src="<%=food.images.standard_resolution.url%>">
         <h4><%= food.location.name %> </h4>
         <% if food.caption.present? && food.caption.has_key?("text") %>
@@ -16,6 +18,7 @@
       <% end %> 
     <% end %>
     
+  <% end %>
   <% end %>
 </div>
 

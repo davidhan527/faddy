@@ -10,6 +10,18 @@ Faddy::Application.routes.draw do
 
   get '/food', :to => 'faddys#food'
 
+  get '/desserts', :to => 'faddys#desserts'
+
+  get '/drinks', :to => 'faddys#drinks'
+=begin
+
+oauth_callbackGET    /oauth/callback(.:format)     sessions#new
+               GET    /location(.:format)           faddys#new
+          food GET    /food(.:format)               faddys#food
+      desserts GET    /desserts(.:format)           faddys#desserts
+        drinks GET    /drinks(.:format)             faddys#drinks
+=end
+
 # root :to => 'faddys#index'
 
 # get '/faddys', :to => 'faddys#connect'
