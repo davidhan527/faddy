@@ -6,7 +6,7 @@
   
     <% if !(@drinks_tags & drink.tags).empty? %>
       <% if (@tag_filter & drink.tags).empty? %>
-        <div class="eight columns offset-by-three">
+        <div class="eight columns offset-by-one">
         <img src="<%=drink.images.standard_resolution.url%>">
         <h4><%= drink.location.name %> </h4>
         <% if drink.caption.present? && drink.caption.has_key?("text") %>
