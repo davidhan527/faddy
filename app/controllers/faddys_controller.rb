@@ -31,7 +31,7 @@ class FaddysController < ApplicationController
 
         @food_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
         @food_tags = ["food", "foodporn", "yum", "yummy", "foodie", "instafood", "instagood", "dinner", "lunch", "breakfast", "fresh", "tasty", "delish", "delicious", "eating", "foodpic", "foodpics", "eat", "foodgasm", "foods"]
-        @tag_filter = ["dog", "sexy", "fashion", "swag", "funny"]
+        @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
         #food #foodporn #yum #instafood #TagsForLikes #yummy #amazing #instagood #photooftheday #sweet #dinner #lunch #breakfast #fresh #tasty #food #delish #delicious #eating #foodpic #foodpics #eat #hungry #foodgasm #hot #foods
 
         # <% if food.tags.include?("food") || food.tags.include?("foodporn") || food.tags.include?("yum") || food.tags.include?("instafood") || food.tags.include?("yummy") || food.tags.include?("foodie") %>
