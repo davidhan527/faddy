@@ -5,6 +5,7 @@
     <div class="six columns">
       <img class="img" src="<%=food.images.standard_resolution.url%>">
       <h4><%= food.location.name %> </h4>
+      <h4><%= food.caption.text %> </h4>
       <p>Tags: <%= food.tags.join(" | ") %></p>
       <p>Likes: <%= food.likes["count"] %></p>
     </div>
