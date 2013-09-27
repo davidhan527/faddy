@@ -56,7 +56,7 @@ class FaddysController < ApplicationController
 
         @desserts_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
         @desserts_tags = ["dessert", "desserts", "sweet", "chocolate", "cake", "icecream", "dessertporn", "delish", "sweettooth"]
-        @tag_filter = ["dog", "sexy", "fashion", "swag"]
+        @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
 
         #dessert #food #desserts #TagsForLikes #yum #yummy #amazing #instagood #instafood #sweet #chocolate #cake #icecream #dessertporn #delish #foods #delicious #tasty #eat #eating #hungry #foodpics #sweettooth
 
@@ -82,7 +82,7 @@ class FaddysController < ApplicationController
 
         @drinks_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
         @drinks_tags = ["drink", "drinks", "slurp", "pub", "bar", "liquor", "thirst", "thirsty", "cocktail", "cocktails", "drinkup", "glass", "beer", "beers", "wine"]
-        @tag_filter = ["dog", "sexy", "fashion", "swag"]
+        @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
 
 
 
