@@ -5,15 +5,15 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Chewy|Droid+Serif|Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
   
   <div class="container">
-
+<!-- 
     <div class="one column">|1 column|</div>
     <div class="one column">|2 column|</div>
     <div class="one column">|3 column|</div>
@@ -30,22 +30,23 @@
     <div class="one column">|14 column|</div>
     <div class="one column">|15 column|</div>
     <div class="one column">|16 column|</div>
+     -->
     <div class="row"></div>
     <h1 id="faddy">Faddy</h1>
-  <div class="form_wrapper">
+  <div class="form_wrapper offset-by-one">
   
 
   <form method="get" action="/food">
   <input id="input" type="text" name="location" placeholder="Enter Location" autofocus>
-  <input class="submit" type="submit" value="FOOD">
+  <input id="submit" type="submit" value="FOOD">
 </form>
 <form method="get" action="/desserts">
   <input id="input" type="text" name="location" placeholder="Enter Location">
-  <input class="submit" type="submit" value="DESSERT">
+  <input id="submit" type="submit" value="DESSERT">
 </form>
 <form method="get" action="/drinks">
   <input id="input" type="text" name="location" placeholder="Enter Location">
-  <input class="submit" type="submit" value="DRINKS">
+  <input id="submit" type="submit" value="DRINKS">
 </form>
   </div>
 

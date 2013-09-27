@@ -36,18 +36,36 @@ body {
   background: transparent;
 }
 
+#instagram {
+  margin-top: 40px;
+  margin-bottom: 300px;
+}
+
 #faddy {
   font-family: 'Chewy', cursive;
   text-align: center;
   font-size: 120px;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 80px;
   letter-spacing: 6px;
 
 }
 
 #input {
   display: inline;
+  width: 160px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+
+}
+
+#submit {
+  height: 45px;
+  width: 100px;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: ;
 }
 
 .one {
@@ -60,10 +78,11 @@ body {
 
 
 #food_pic {
-  border: solid 30px black;
+  border: solid 30px #000000;
   border-radius: 20px;
   max-width: 100%;
   height: auto;
+  margin-bottom: 40px;
 }
 
 form {
@@ -71,10 +90,11 @@ form {
 }
 
 .info {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 30px;
   padding: 15px 20px;
 }
+
 
 #profile_pic {
   width: 60px;
@@ -87,6 +107,20 @@ form {
   vertical-align: bottom;
   font-size: 18px;
 }
+
+#username, #location {
+  font-family: 'Droid Serif', serif;
+}
+
+#location {
+  letter-spacing: 1px;
+}
+
+#caption, #likes, #tags {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+}
+
 /*
 #desserts_wrapper {
   background: url(/assets/food2.jpg) no-repeat center center fixed;

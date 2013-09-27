@@ -1,24 +1,30 @@
 
 <div id="instagram" class="picture container">
-
-
+<% if @drinks_sorted.present? %>
   <% @drinks_sorted.each do |drink| %>
   
     <% if !(@drinks_tags & drink.tags).empty? %>
       <% if (@tag_filter & drink.tags).empty? %>
-        <div class="eight columns offset-by-one">
-        <img src="<%=drink.images.standard_resolution.url%>">
-        <h4><%= drink.location.name %> </h4>
-        <% if drink.caption.present? && drink.caption.has_key?("text") %>
-          <p><%= drink.caption["text"] %> </p>
-        <% end %>
-        <p>Likes: <%= drink.likes["count"] %></p>
-        <p>Tags: <%= drink.tags %></p>
+        <div class="seven columns">
+          <img id="food_pic" src="<%=drink.images.standard_resolution.url%>">
         </div>
+          <div class="six columns offset-by-one">
+            <div class="info seven columns">
+              <h3 id="location"><%= drink.location.name %> </h3>
+              <% if drink.caption.present? && drink.caption.has_key?("text") %>
+                <p id="caption"><%= drink.caption["text"] %> </p>
+              <% end %>
+              <p id="likes">Likes: <%= drink.likes["count"] %></p>
+              <p id="tags">Tags: #<%= drink.tags.join(" #") %></p>
+              <img id="profile_pic" src="<%= drink.user.profile_picture%>">
+              <h4 id="username" class="user"><%= drink.user.full_name%> (@<%= drink.user.username %>)</h4>
+            </div>
+          </div>
         <div class="row"></div>
       <% end %> 
     <% end %>
     
+  <% end %>
   <% end %>
 </div>
 

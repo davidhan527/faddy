@@ -10,12 +10,12 @@
         </div>
           <div class="six columns offset-by-one">
             <div class="info seven columns">
-              <h3><%= food.location.name %> </h3>
+              <h3 id="location"><%= food.location.name %> </h3>
               <% if food.caption.present? && food.caption.has_key?("text") %>
-                <p><%= food.caption["text"] %> </p>
+                <p id="caption"><%= food.caption["text"] %> </p>
               <% end %>
-              <p>Likes: <%= food.likes["count"] %></p>
-              <p>Tags: <%= food.tags %></p>
+              <p id="likes">Likes: <%= food.likes["count"] %></p>
+              <p id="tags">Tags: #<%= food.tags.join(" #") %></p>
               <img id="profile_pic" src="<%= food.user.profile_picture%>">
               <h4 id="username" class="user"><%= food.user.full_name%> (@<%= food.user.username %>)</h4>
             </div>
@@ -29,13 +29,13 @@
 </div>
 
 
-<div id="bg">
+<!-- <div id="bg">
   <img src="assets/food.png" alt="">
 </div>
+ -->
 
 
-<!-- 
 <script>
 $('body').addClass('background_image');
 </script>
- -->
+
