@@ -3,6 +3,44 @@ body {
   background-size: 100%;
 }
 
+.background_image {
+  background: url(/assets/food.png) no-repeat center center fixed;
+  background-size: 100%;
+  /*position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%; */
+}
+
+
+.background_image_1 {
+  background: url(/assets/food2.jpg) no-repeat center center fixed;
+  background-size: 100%;
+}
+
+.background_image_2 {
+  /* some other image*/
+  background: url(/assets/food3.jpg) no-repeat center center fixed;
+  background-size: 100%;
+}
+
+
+
+.container {
+  background: transparent;
+}
+
+#faddy {
+  font-family: 'Chewy', cursive;
+  text-align: center;
+  font-size: 120px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  letter-spacing: 6px;
+
+}
+
 #input {
   display: inline;
 }
@@ -33,17 +71,26 @@ form {
 .info {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
-  padding: 0 20px;
+  padding: 15px 20px;
 }
 
 #profile_pic {
   width: 60px;
   border-radius: 10px;
   float: right;
-  margin-bottom: 20px;
+  /*margin-bottom: px;*/
 }
 
 #username {
   vertical-align: bottom;
+  font-size: 18px;
 }
+/*
+#desserts_wrapper {
+  background: url(/assets/food2.jpg) no-repeat center center fixed;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+}
+*/
 

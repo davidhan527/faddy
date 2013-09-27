@@ -17,7 +17,7 @@
               <p>Likes: <%= food.likes["count"] %></p>
               <p>Tags: <%= food.tags %></p>
               <img id="profile_pic" src="<%= food.user.profile_picture%>">
-              <h4 id="username"><%= food.user.full_name%> (@<%= food.user.username %>)</h4>
+              <h4 id="username" class="user"><%= food.user.full_name%> (@<%= food.user.username %>)</h4>
             </div>
           </div>
         <div class="row"></div>
@@ -27,4 +27,8 @@
   <% end %>
   <% end %>
 </div>
+
+<script>
+$('body').addClass('background_image');
+</script>
 

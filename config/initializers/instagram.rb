@@ -6,4 +6,4 @@ Instagram.configure do |config|
 end
 
 
-CALLBACK_URL = "http://faddy.herokuapp.com/oauth/callback"
+CALLBACK_URL = "http://localhost:3000/oauth/callback"

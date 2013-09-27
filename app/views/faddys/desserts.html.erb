@@ -1,24 +1,31 @@
 
-<div id="instagram" class="picture container">
+
+<div id="desserts_wrapper">
+  <div id="instagram" class="picture container">
 
 
-  <% @desserts_sorted.each do |dessert| %>
-  
-    <% if !(@desserts_tags & dessert.tags).empty? %>
-      <% if (@tag_filter & dessert.tags).empty? %>
-        <div class="eight columns offset-by-three">
-        <img src="<%=dessert.images.standard_resolution.url%>">
-        <h4><%= dessert.location.name %> </h4>
-        <% if dessert.caption.present? && dessert.caption.has_key?("text") %>
-          <p><%= dessert.caption["text"] %> </p>
-        <% end %>
-        <p>Likes: <%= dessert.likes["count"] %></p>
-        <p>Tags: <%= dessert.tags %></p>
-        </div>
-        <div class="row"></div>
-      <% end %> 
-    <% end %>
+    <% @desserts_sorted.each do |dessert| %>
     
-  <% end %>
-</div>
+      <% if !(@desserts_tags & dessert.tags).empty? %>
+        <% if (@tag_filter & dessert.tags).empty? %>
+          <div class="eight columns offset-by-one">
+          <img src="<%=dessert.images.standard_resolution.url%>">
+          <h4><%= dessert.location.name %> </h4>
+          <% if dessert.caption.present? && dessert.caption.has_key?("text") %>
+            <p><%= dessert.caption["text"] %> </p>
+          <% end %>
+          <p>Likes: <%= dessert.likes["count"] %></p>
+          <p>Tags: <%= dessert.tags %></p>
+          </div>
+          <div class="row"></div>
+        <% end %> 
+      <% end %>
+      
+    <% end %>
+  </div>
 
+</div>
+ 
+<script>
+$('body').addClass('background_image_1');
+</script> 
