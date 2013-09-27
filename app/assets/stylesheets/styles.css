@@ -71,8 +71,10 @@ body {
 #submit {
   height: 45px;
   width: 100px;
-  font-size: 14px;
   border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Chewy', cursive;
+  letter-spacing: 1.5px;
 }
 
 .one {
