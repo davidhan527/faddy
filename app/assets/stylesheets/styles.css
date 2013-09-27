@@ -1,11 +1,16 @@
+
 body {
   background: url(/assets/food.png) no-repeat center center fixed;
-  background-size: 100%;
+  /*background-size: 100%;*/
 }
 
+
+body {
+  z-index: 2;
+}
 .background_image {
   background: url(/assets/food.png) no-repeat center center fixed;
-  background-size: 100%;
+  /*background-size: 100%;*/
   /*position: fixed; 
   top: 0; 
   left: 0;
@@ -16,13 +21,13 @@ body {
 
 .background_image_1 {
   background: url(/assets/food2.jpg) no-repeat center center fixed;
-  background-size: 100%;
+  /*background-size: 100%;*/
 }
 
 .background_image_2 {
   /* some other image*/
   background: url(/assets/food3.jpg) no-repeat center center fixed;
-  background-size: 100%;
+  /*background-size: 100%;*/
 }
 
 
@@ -53,15 +58,12 @@ body {
   text-align: center;
 }*/
 
-#instagram img {
-    max-width: 100%;
-    height: auto;
-    
-}
 
 #food_pic {
   border: solid 30px black;
   border-radius: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 form {
@@ -93,4 +95,24 @@ form {
   height: 100%;
 }
 */
-
+/*
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  z-index: 1;
+}
+*/
