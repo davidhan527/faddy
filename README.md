@@ -1,3 +1,4 @@
-# [Faddy](http://faddy.herokuapp.com/)
-------
+#[Faddy](faddy.herokuapp.com/)
+----------
+
 Find trending food items anywhere in the world!
