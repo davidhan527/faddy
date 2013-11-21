@@ -1,11 +1,10 @@
 class FaddysController < ApplicationController
 
 
-    def new
-        client = Instagram.client(:access_token => session[:access_token])
-    end 
+    # def new
+    #   client = Instagram.client(:access_token => session[:access_token])
+    # end 
 
-    # redirect_to '/feed'    
     def food
       client = Instagram.client(:access_token => session[:access_token])
 
