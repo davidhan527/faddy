@@ -17,3 +17,5 @@ gem 'geocoder'
 gem 'httparty'
 
 gem 'jquery-rails'
+
+gem 'uglifier', '>= 1.0.3'
