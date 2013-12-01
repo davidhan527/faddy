@@ -2,6 +2,7 @@ class FaddysController < ApplicationController
     before_filter :results
 
     def results
+      client = Instagram.client(:access_token => session[:access_token])      
       location = params[:location]
       coordinates = Geocoder.coordinates("#{location}")
     
