@@ -6,7 +6,7 @@ class FaddysController < ApplicationController
       location = params[:location]
       find_results(location)
 
-      @food_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
+      @food_sorted = @results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
       @food_tags = ["food", "foodporn", "yum", "yummy", "foodie", "instafood", "dinner", "lunch", "breakfast", "tasty", "delish", "delicious", "eating", "foodpic", "foodpics", "eat", "foodgasm", "foods"]
       @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
       @which_num = 2
@@ -66,8 +66,7 @@ class FaddysController < ApplicationController
       loc_right = Instagram.media_search("#{x}","#{y - 0.012}", options = {:count => 100})
       loc_left = Instagram.media_search("#{x}","#{y + 0.012}", options = {:count => 100})
 
-      results = loc + loc_top + loc_bottom + loc_left + loc_right
-      return results
+      @results = loc + loc_top + loc_bottom + loc_left + loc_right
     end
 
 end
