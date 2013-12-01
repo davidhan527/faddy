@@ -53,7 +53,7 @@ class FaddysController < ApplicationController
       @drinks_tags = ["drink", "drinks", "slurp", "pub", "bar", "liquor", "thirst", "thirsty", "cocktail", "cocktails", "drinkup", "glass", "beer", "beers", "wine"]
       @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
     end
-    
+
     def find_results(location)
       coordinates = Geocoder.coordinates("#{location}")
     
@@ -67,6 +67,7 @@ class FaddysController < ApplicationController
       loc_left = Instagram.media_search("#{x}","#{y + 0.012}", options = {:count => 100})
 
       results = loc + loc_top + loc_bottom + loc_left + loc_right
+      return results
     end
-      
+
 end
