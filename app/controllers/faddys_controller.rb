@@ -17,7 +17,7 @@ class FaddysController < ApplicationController
       location = params[:location]
       find_results(location)
 
-      @desserts_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
+      @desserts_sorted = @results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
       @desserts_tags = ["dessert", "desserts", "sweet", "chocolate", "cake", "icecream", "dessertporn", "delish", "sweettooth"]
       @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
     end
@@ -26,8 +26,8 @@ class FaddysController < ApplicationController
       client = Instagram.client(:access_token => session[:access_token])      
       location = params[:location]
       find_results(location)
-      
-      @drinks_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
+
+      @drinks_sorted = @results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
       @drinks_tags = ["drink", "drinks", "slurp", "pub", "bar", "liquor", "thirst", "thirsty", "cocktail", "cocktails", "drinkup", "glass", "beer", "beers", "wine"]
       @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
     end
