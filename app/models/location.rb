@@ -15,7 +15,7 @@ class Location < ActiveRecord::Base
     loc_right = Instagram.media_search("#{x}","#{y - 0.012}", options = {:count => 100})
     loc_left = Instagram.media_search("#{x}","#{y + 0.012}", options = {:count => 100})
 
-    @results = loc + loc_top + loc_bottom + loc_left + loc_right
+    results = loc + loc_top + loc_bottom + loc_left + loc_right
   end
 
 

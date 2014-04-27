@@ -1,9 +1,7 @@
-
-<div id="instagram" class="picture container">
-<% if @food_sorted.present? %>
-  <% @food_sorted.each do |food| %>
+<% if results.present? %>
+  <% results.each do |food| %>
   
-    <% if !(@food_tags & food.tags).empty? && (@filter_tags & food.tags).empty? %>
+    <% if !(food_tags & food.tags).empty? && (filter_tags & food.tags).empty? %>
         <div class="seven columns">
           <img id="food_pic" src="<%=food.images.standard_resolution.url%>">
         </div>
@@ -23,17 +21,3 @@
     <% end %>
   <% end %>
 <% end %>
-<%= render partial: "results", locals: {results: @food_results, food_tags: @food_tags, filter_tags: @filter_tags } %>
-</div>
-
-
-<!-- <div id="bg">
-  <img src="assets/food.png" alt="">
-</div>
- -->
-
-
-<script>
-$('body').addClass('background_image');
-</script>
-
