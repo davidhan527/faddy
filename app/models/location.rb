@@ -18,5 +18,4 @@ class Location < ActiveRecord::Base
     results = loc + loc_top + loc_bottom + loc_left + loc_right
   end
 
-
 end
