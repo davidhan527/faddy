@@ -1,9 +1,9 @@
 
 <div id="instagram" class="picture container">
-<% if @drinks_sorted.present? %>
-  <% @drinks_sorted.each do |drink| %>
+<% if @sorted_results.present? %>
+  <% @sorted_results.each do |drink| %>
   
-    <% if !(@drinks_tags & drink.tags).empty? && (@tag_filter & drink.tags).empty? %>
+    <% if !(@food_tags & drink.tags).empty? && (@filter_tags & drink.tags).empty? %>
       <div class="seven columns">
         <img id="food_pic" src="<%=drink.images.standard_resolution.url%>">
       </div>
@@ -23,7 +23,8 @@
     <% end %>
     
   <% end %>
-  <% end %>
+<% end %>
+<%= render partial: "food_results", locals: {results: @sorted_results, food_tags: @food_tags, filter_tags: @filter_tags } %>
 </div>
 
 <script>

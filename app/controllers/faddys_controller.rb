@@ -15,9 +15,9 @@ class FaddysController < ApplicationController
     location = params[:location]
     results = find_results(location)
 
-    @desserts_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
-    @desserts_tags = ["dessert", "desserts", "sweet", "chocolate", "cake", "icecream", "dessertporn", "delish", "sweettooth"]
-    @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
+    @sorted_results = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
+    @food_tags = ["dessert", "desserts", "sweet", "chocolate", "cake", "icecream", "dessertporn", "delish", "sweettooth"]
+    @filter_tags = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
   end
 
   def drinks
@@ -25,9 +25,9 @@ class FaddysController < ApplicationController
     location = params[:location]
     results = find_results(location)
 
-    @drinks_sorted = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
-    @drinks_tags = ["drink", "drinks", "slurp", "pub", "bar", "liquor", "thirst", "thirsty", "cocktail", "cocktails", "drinkup", "glass", "beer", "beers", "wine"]
-    @tag_filter = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
+    @sorted_results = results.sort_by {|hash| hash.likes["count"]}.uniq.reverse! #first(15)
+    @food_tags = ["drink", "drinks", "slurp", "pub", "bar", "liquor", "thirst", "thirsty", "cocktail", "cocktails", "drinkup", "glass", "beer", "beers", "wine"]
+    @filter_tags = ["dog", "sexy", "fashion", "swag", "funny", "gay"]
   end
 
 private
