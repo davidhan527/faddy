@@ -3,8 +3,7 @@
 <% if @food_sorted.present? %>
   <% @food_sorted.each do |food| %>
   
-    <% if !(@food_tags & food.tags).empty? %>
-      <% if (@tag_filter & food.tags).empty? %>
+    <% if !(@food_tags & food.tags).empty? && if (@tag_filter & food.tags).empty? %>
         <div class="seven columns">
           <img id="food_pic" src="<%=food.images.standard_resolution.url%>">
         </div>
@@ -21,7 +20,6 @@
             </div>
           </div>
         <div class="row"></div>
-      <% end %> 
     <% end %>
     
   <% end %>
