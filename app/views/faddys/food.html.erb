@@ -1,7 +1,7 @@
 
 <div id="instagram" class="picture container">
-<% if @food_sorted.present? %>
-  <% @food_sorted.each do |food| %>
+<% if @sorted_results.present? %>
+  <% @sorted_results.each do |food| %>
   
     <% if !(@food_tags & food.tags).empty? && (@filter_tags & food.tags).empty? %>
         <div class="seven columns">
