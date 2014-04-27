@@ -1,28 +1,6 @@
 
 <div id="instagram" class="picture container">
-<% if @sorted_results.present? %>
-  <% @sorted_results.each do |food| %>
-  
-    <% if !(@food_tags & food.tags).empty? && (@filter_tags & food.tags).empty? %>
-        <div class="seven columns">
-          <img id="food_pic" src="<%=food.images.standard_resolution.url%>">
-        </div>
-          <div class="six columns offset-by-one">
-            <div class="info seven columns">
-              <h3 id="location"><%= food.location.name %> </h3>
-              <% if food.caption.present? && food.caption.has_key?("text") %>
-                <p id="caption"><%= food.caption["text"] %> </p>
-              <% end %>
-              <p id="likes">Likes: <%= food.likes["count"] %></p>
-              <p id="tags">Tags: #<%= food.tags.join(" #") %></p>
-              <img id="profile_pic" src="<%= food.user.profile_picture%>">
-              <h4 id="username" class="user"><%= food.user.full_name%> (@<%= food.user.username %>)</h4>
-            </div>
-          </div>
-        <div class="row"></div>
-    <% end %>
-  <% end %>
-<% end %>
+
 <%= render partial: "food_results", locals: {results: @sorted_results, food_tags: @food_tags, filter_tags: @filter_tags } %>
 </div>
 
